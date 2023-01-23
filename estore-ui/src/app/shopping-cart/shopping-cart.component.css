@@ -1,0 +1,53 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+th {
+  background-color: #003c56;
+  color: white;
+  font-size: large;
+}
+
+th,
+td {
+  width: 10000px;
+  text-align: center;
+  padding: 5px;
+}
+
+#delete {
+  background-color: rgb(138, 0, 0);
+}
+
+#delete:hover {
+  background-color: red;
+}
+
+label{
+  font-size: 10pt;
+  font-style: italic;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width : 900px) {
+  #content {
+      flex-direction: column;
+  }
+}
+
+#bottom{
+  display: flex;
+  justify-content: center;
+  vertical-align: bottom;
+}
+
+#top{
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}

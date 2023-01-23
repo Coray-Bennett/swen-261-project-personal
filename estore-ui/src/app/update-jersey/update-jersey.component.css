@@ -1,0 +1,25 @@
+
+td {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width : 900px) {
+    #content {
+        flex-direction: column;
+    }
+}
+
+.update {
+    flex: auto;
+    justify-content: space-between;
+    margin-right: 5%;
+    max-width: 25%;
+}
+
+

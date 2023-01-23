@@ -1,0 +1,17 @@
+
+#fields {
+    max-width: fit-content;
+    margin: auto;
+}
+
+#invalidPassword {
+    color: var(--DARK-RED);
+    font-weight: bold;
+    font-size: 16pt;
+    text-align: center;
+}
+
+#loginButton {
+    max-width: fit-content;
+    margin: auto;
+}

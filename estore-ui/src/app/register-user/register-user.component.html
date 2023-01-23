@@ -1,0 +1,38 @@
+<div id="fields">
+    <tr>
+        <td>
+            <label for="new-user">Username:</label>
+        </td>
+        <td  style="padding-left:10px;">   
+            <input type="string" name="new-user" #username />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="password">Password:</label>
+        </td>
+        <td  style="padding-left:10px;">   
+            <input type="password" name="password" #password />
+        </td>
+    </tr>
+</div>
+
+    <div id="loginButton">
+        <p>
+            <button type="button"  (mouseup)="loggedIn(username.value, password.value)">
+                Login
+            </button>
+        </p>
+    </div>
+    
+    <p id="invalidPassword" *ngIf="invalidPassword">
+        Incorrect Password Entered
+    </p>
+
+
+
+
+
+<!-- <button type="button" (click)="add(username.value); username.value=''">
+        Register
+    </button>-->

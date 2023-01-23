@@ -1,0 +1,34 @@
+<div *ngIf="discountJersey" id="body">
+    <p id="name">{{discountJersey.jersey.name}}</p>
+ 
+    <div id="info">
+        <div id="properties">
+            <p id="number">Number: {{discountJersey.jersey.number}}</p>
+            <p id="size">Size: {{discountJersey.jersey.size}}</p>
+            <p id="color">Color: {{discountJersey.jersey.color}}</p>
+            <p id="quantity" *ngIf="!inCart">In Stock: {{discountJersey.jersey.quantity}}</p>
+            <p id="quantity" *ngIf="inCart">In Stock: {{remainingQuantity}}</p>
+        </div>
+        <div id="price">
+            <p>${{discountJersey.finalPrice}}</p>
+            <div *ngIf="discountJersey.discount">
+                <p id="percent">{{discountJersey.discount.percent}}% OFF</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div *ngIf="isAdmin" id="adminButtons">
+        <button class="button" routerLink="/update-jersey/{{index}}">Update</button>
+        <button class="button" *ngIf="!confirm" id="delete" (click)="confirmDelete()">Delete</button>
+        <button class="button" *ngIf="confirm" id="cancelDelete" (click)="cancelDelete()">Cancel</button>
+        <button class="button" *ngIf="confirm" id="confirmDelete" (click)="delete()">Confirm</button>
+    </div>
+   
+    <div *ngIf="!isAdmin">
+        <input id="amount" type="number" min="1" [defaultValue]="1" #quantity>
+        <button class="button" id="add-to-cart" (click)="addToCart(quantity.value)">Add To Cart</button>
+        <div *ngIf="unableToAdd">
+            <label>Out of Stock</label>
+        </div>
+    </div>
+</div>

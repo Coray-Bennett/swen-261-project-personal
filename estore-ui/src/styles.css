@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    /* color palette */
+
+    --YELLOW : #FFB81C;
+    --LIGHT-YELLOW : #f4e254;
+    --BLUE : #003c56;
+    --LIGHT-BLUE : #4e7373;
+    --HOVER-BLUE : #567eff;
+    --DARK-BLUE : #0C252E;
+    --DARK-RED : #8A0000;
+    --GREEN : rgb(50, 166, 50); 
+    /* including black is implied */
+
+    /*font family*/
+    --GLOBAL-FONT : Cambria, 'Times New Roman', sans-serif;
+}
+
+body {
+    background-color: var(--DARK-BLUE);
+    color: white;
+    font-family: var(--GLOBAL-FONT);
+}
+
+button {
+    background-color: var(--BLUE);
+    border: none;
+    border-radius: 5%;
+    font-family: var(--GLOBAL-FONT);
+    font-weight: bold;
+    font-size: 12pt;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: var(--HOVER-BLUE);
+}
+
+input {
+    border: 2px solid var(--DARK-RED);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 14pt;
+    color: white;
+}

@@ -1,0 +1,112 @@
+<div class="info">
+    <div class="left">
+        <form action="">
+            <h2>Shipping Details</h2>
+            <p>Full Name</p>
+            <input type="text" class="inputbox" name="name" #name />
+            <p>Street Address</p>
+            <input type="text" class="inputbox" name="address" #address />
+            <p>City</p>
+            <input type="text" class="inputbox" name="city" #city />
+            <div class="stateAndZip">
+                <p class="state">State</p>
+                <select class="inputbox" name="state" id="state" #state>
+                    <option value="" selected disabled>--State--</option>
+                    <option class="select-option" value="AL">AL</option>
+                    <option class="select-option" value="AK">AK</option>
+                    <option class="select-option" value="AS">AS</option>
+                    <option class="select-option" value="AZ">AZ</option>
+                    <option class="select-option" value="AR">AR</option>
+                    <option class="select-option" value="AA">AA</option>
+                    <option class="select-option" value="AE">AE</option>
+                    <option class="select-option" value="AP">AP</option>
+                    <option class="select-option" value="CA">CA</option>
+                    <option class="select-option" value="CO">CO</option>
+                    <option class="select-option" value="CT">CT</option>
+                    <option class="select-option" value="DE">DE</option>
+                    <option class="select-option" value="DC">DC</option>
+                    <option class="select-option" value="FM">FM</option>
+                    <option class="select-option" value="FL">FL</option>
+                    <option class="select-option" value="GA">GA</option>
+                    <option class="select-option" value="GU">GU</option>
+                    <option class="select-option" value="HI">HI</option>
+                    <option class="select-option" value="ID">ID</option>
+                    <option class="select-option" value="IL">IL</option>
+                    <option class="select-option" value="IN">IN</option>
+                    <option class="select-option" value="IA">IA</option>
+                    <option class="select-option" value="KS">KS</option>
+                    <option class="select-option" value="KY">KY</option>
+                    <option class="select-option" value="LA">LA</option>
+                    <option class="select-option" value="ME">ME</option>
+                    <option class="select-option" value="MH">MH</option>
+                    <option class="select-option" value="MD">MD</option>
+                    <option class="select-option" value="MA">MA</option>
+                    <option class="select-option" value="MI">MI</option>
+                    <option class="select-option" value="MN">MN</option>
+                    <option class="select-option" value="MS">MS</option>
+                    <option class="select-option" value="MO">MO</option>
+                    <option class="select-option" value="MT">MT</option>
+                    <option class="select-option" value="NE">NE</option>
+                    <option class="select-option" value="NV">NV</option>
+                    <option class="select-option" value="NH">NH</option>
+                    <option class="select-option" value="NJ">NJ</option>
+                    <option class="select-option" value="NM">NM</option>
+                    <option class="select-option" value="NY">NY</option>
+                    <option class="select-option" value="NC">NC</option>
+                    <option class="select-option" value="ND">ND</option>
+                    <option class="select-option" value="MP">MP</option>
+                    <option class="select-option" value="OH">OH</option>
+                    <option class="select-option" value="OK">OK</option>
+                    <option class="select-option" value="OR">OR</option>
+                    <option class="select-option" value="PW">PW</option>
+                    <option class="select-option" value="PA">PA</option>
+                    <option class="select-option" value="PR">PR</option>
+                    <option class="select-option" value="RI">RI</option>
+                    <option class="select-option" value="SC">SC</option>
+                    <option class="select-option" value="SD">SD</option>
+                    <option class="select-option" value="TN">TN</option>
+                    <option class="select-option" value="TX">TX</option>
+                    <option class="select-option" value="VI">VI</option>
+                    <option class="select-option" value="UT">UT</option>
+                    <option class="select-option" value="VT">VT</option>
+                    <option class="select-option" value="VA">VA</option>
+                    <option class="select-option" value="WA">WA</option>
+                    <option class="select-option" value="WV">WV</option>
+                    <option class="select-option" value="WI">WI</option>
+                    <option class="select-option" value="WY">WY</option>
+                </select>
+                <p class="zip">Zip</p>
+                <input type="number" class="inputbox" name="zip" id="zip" #Zip />
+            </div>
+        </form>
+    </div>
+    <div class="right">
+        <form action="">
+            <h2>Payment Information</h2>
+            <p>Cardholder Name</p>
+            <input type="text" class="inputbox" name="name" required />
+            <p>Card Number</p>
+            <input type="number" class="inputbox" name="card_number" id="card_number" #CardNumber />
+
+            <p>Card Type</p>
+            <select class="inputbox" name="card_type" id="card_type" #CardType>
+                <option value="" selected disabled>--Select a Card Type--</option>
+                <option value="Visa">Visa</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Discover">Discover</option>
+                <option value="MasterCard">MasterCard</option>
+            </select>
+
+            <div class="dateAndCvv">
+                <p class="exp">Exp.</p>
+                <input type="date" class="inputbox" name="exp." id="exp." #Exp />
+
+                <p class="cvv">CVV</p>
+                <input type="password" class="inputbox" name="cvv" id="cvv" #CVV />
+            </div>
+            <div *ngIf="purchasable">
+                <button type="submit" class="button" routerLink="/shopping-cart" (click)="clearCart()">CheckOut</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div *ngIf="online" id="content">
+ 
+    <div id="left">
+        <p>
+            <input id="search" #searchBox (input)="search(searchBox.value)" placeholder="Search"/>
+        </p>
+        <div id="sort-buttons">
+            <button type="button" class="sort-button" (click)="sortJerseys(1);">
+                Price: Low to High
+            </button>
+            <button type="button" class="sort-button" (click)="sortJerseys(2);">
+                Price: High to Low
+            </button>
+            <button type="button" class="sort-button" (click)="sortJerseys(3);">
+                By Name: A to Z
+            </button>
+            <button type="button" class="sort-button" (click)="sortJerseys(4);">
+                By Name: Z to A
+            </button>
+        </div>
+    </div>
+  
+    <ul id="right">
+        <a *ngFor="let discountJersey of discountedJerseys" class="discountJersey">
+            <app-view-jersey [discountJersey]="discountJersey"></app-view-jersey>
+        </a>
+    </ul>
+   
+    <!-- <ul id="right">
+        <a *ngFor="let jersey of jerseys" class="jersey">
+            <app-view-jersey [jersey]="jersey"></app-view-jersey>
+        </a>
+    </ul> -->
+  </div>

@@ -1,0 +1,90 @@
+@media only screen and (max-width: 1000px) {
+  .info{
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.info {
+  vertical-align: top;
+  display: flex;
+  justify-content:space-evenly;
+  padding: 5%;
+  width: 90%;
+}
+ 
+.left, .right {
+  padding: 3rem 3rem;
+  width:100%;
+}
+ 
+p{
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: .8rem 0;
+}
+ 
+.inputbox
+{
+  /* color:#030303; */
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline:none;
+}
+ 
+.dateAndCvv {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+}
+ 
+.exp{
+  padding-right: 1rem;
+}
+
+.cvv{
+  padding:0 1rem;
+}
+
+.stateAndZip {
+  display:flex;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+}
+ 
+.state{
+  padding-right: 1rem;
+}
+
+.zip{
+  padding:0 1rem;
+}
+ 
+.button{
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width:100%;
+  letter-spacing: .11rem;
+  background: linear-gradient(135deg, #FFB81C 0%, #003c56 70%);
+  padding: 15px;
+  border: none;
+  font-weight: 400;
+  outline:none;
+  border-radius: 50px;
+  color: white;
+  
+}
+ 
+.button:hover
+{
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+}

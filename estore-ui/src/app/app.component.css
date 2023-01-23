@@ -1,0 +1,68 @@
+
+h1 {
+    font-size: 40pt;
+    text-align: center;
+}
+
+nav {
+    margin: auto;
+    margin-bottom: 15px;
+    max-width: 75%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    background-color: var(--YELLOW);
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 3px;
+    flex: auto;
+}
+
+@media screen and (max-width:900px) {
+    a {
+        width: 80%;
+    }
+}
+
+a:hover {
+    background-color: var(--LIGHT-YELLOW);
+}
+.logo {
+    max-width:5%; 
+    max-height:5%;
+    min-width: 75px;
+    min-height: 75px;
+}
+
+#content {
+    width: 80%;
+    margin: auto;
+    background-color: gray;
+    border-radius: 25px;
+    padding: 1em;
+    align-self: flex-start;
+}
+
+#main {
+    max-width: 100%;
+    margin: auto;
+}
+
+#header {
+    display: flex;
+    max-width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+}
+
+

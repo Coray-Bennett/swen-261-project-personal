@@ -1,0 +1,28 @@
+
+<div id="header">
+  <img src="../assets/images/bruins-logo.png" alt="Bruins Logo" class="logo">
+  <h1>{{title}}</h1>
+  <img src="../assets/images/bruins-logo.png" alt="Bruins Logo" class="logo">
+</div>
+
+<nav>
+  <a *ngIf="online" routerLink="/jersey-search">Browse</a> 
+  <a *ngIf="!adminOnline && online" routerLink="/shopping-cart">Cart</a>
+  <a *ngIf="adminOnline && online" routerLink="/create-jersey">Add Jersey</a>
+  <a *ngIf="online" (click)="logout()" routerLink="/">{{currentUser?.username}}: Logout</a>
+</nav>
+
+<div id="content">
+  <div>
+    <app-register-user *ngIf="!online"
+    (talk)="login($event)">
+    </app-register-user>
+  </div>
+  <router-outlet id="main"></router-outlet>
+</div>
+
+<app-messages *ngIf="adminOnline"></app-messages>
+
+<!-- no longer used -->
+  <!-- <a routerLink="/delete-jersey">Delete Jerseys</a> &nbsp; -->
+  <!-- <a routerLink="/jersey-search">Search Jerseys</a> &nbsp;  -->

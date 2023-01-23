@@ -1,0 +1,66 @@
+<h2>Add New Jersey To Inventory</h2>
+
+<table class="formcontrols" >
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Name:</label>
+        </td>
+        <td  style="padding-left:10px;">   
+            <input type="string" name="new-jersey" #jerseyName />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Number: </label>
+        </td>
+        <td  style="padding-left:10px;">    
+            <input type="number" number="new-jersey" #jerseyNumber />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Price: </label>
+        </td>
+        <td  style="padding-left:10px;">
+            <input type="number" price="new-jersey" #jerseyPrice />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Size: </label>
+        </td>
+        <td  style="padding-left:10px;">
+            <input type="string" size="new-jersey" #jerseySize />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Color: </label>
+        </td>
+        <td  style="padding-left:10px;">
+            <input type="string" color="new-jersey" #jerseyColor />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <label for="new-jersey">Jersey Quantity: </label>
+        </td>
+        <td  style="padding-left:10px;">
+            <input type="number" quantity="new-jersey" #jerseyQuantity />
+        </td>
+    </tr>
+
+    <p>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button type="button" class="add-button" (click)="add(jerseyName.value, jerseyNumber.value, 
+        jerseyPrice.value, jerseySize.value, jerseyColor.value, jerseyQuantity.value); jerseyName.value=''; 
+        jerseyNumber.value=''; jerseyPrice.value=''; jerseySize.value=''; jerseyColor.value=''; jerseyQuantity.value=''">
+        Add Jersey
+        </button>
+    </p>
+</table>

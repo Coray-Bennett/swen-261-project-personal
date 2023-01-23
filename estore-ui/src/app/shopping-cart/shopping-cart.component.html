@@ -1,0 +1,51 @@
+<div id="content" *ngIf="!emptyCart">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Remove</th>
+    </tr>
+    <tr *ngFor="let jerseyItem of userCart">
+      <td>
+        <h3>{{jerseyItem.discountedJersey.jersey.name}}</h3>
+      </td>
+      <td>Number {{jerseyItem.discountedJersey.jersey.number}} <br> Color {{jerseyItem.discountedJersey.jersey.color}} <br> Size&nbsp;&nbsp; {{jerseyItem.discountedJersey.jersey.size}}</td>
+      <td>
+        <!-- will become finalPrice once merged with updated discount functionality -->
+        <strong>${{jerseyItem.discountedJersey.finalPrice}}</strong>
+      
+        <label *ngIf="jerseyItem.discountedJersey.finalPrice!==jerseyItem.discountedJersey.jersey.price">reg${{jerseyItem.discountedJersey.jersey.price}}</label>
+      </td>
+      <td>
+        <button class="button" id="decrement" (click)="decrement(jerseyItem.discountedJersey.jersey.index)">-</button>
+        <strong>{{jerseyItem.quantity}}</strong>
+        <button class="button" id="increment" (click)="increment(jerseyItem.discountedJersey.jersey.index)">+</button>
+      </td>
+      <td>
+          <button class="button" id="delete" (click)="removeItem(jerseyItem.discountedJersey.jersey.index)">
+              Remove
+          </button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4"></td>
+      <td><span style="float: right;">Subtotal ${{calcTotal()}}</span></td>
+    </tr>
+    <tr>
+      <td colspan="4"></td>
+      <button type="button" class="button" routerLink="/checkout" style="float: right;">
+          Proceed to checkout
+      </button>
+    </tr>
+  </table>
+</div>
+<div *ngIf="emptyCart">
+  <h1 id = top>Your cart's empty</h1>
+  <div id = "bottom">
+    <button type="button" class="button" routerLink="/jersey-search">
+      Start Shopping
+    </button>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+
+    <div class="section">
+        <button type="button" *ngIf="isAdmin" (click)="goBack()">Back</button>
+    </div>
+
+    <div *ngIf=" isAdmin && jersey" id="content" class="section">
+        
+        <div class="update" id="jersey">
+
+        <h2>Jersey Details</h2>
+
+            <td>
+                <label for="jersey-name">Jersey Name:</label>
+                <input type="string" index="jersey-name" [(ngModel)]="jersey.name" placeholder="Nick">
+            </td><br>
+
+            <td>
+                <label for="jersey-number">Jersey Number:</label>
+                <input type="number" index="jersey-number" [(ngModel)]="jersey.number" placeholder="0">
+            </td><br>
+            
+            <td>
+                <label for="jersey-price">Jersey Price: </label>
+                <input type="number" index="jersey-price" [(ngModel)]="jersey.price" placeholder="99.99">
+            </td><br>
+            
+            <td>
+                <label for="jersey-size">Jersey Size:</label>
+                <input type="string" index="jersey-size" [(ngModel)]="jersey.size" placeholder="Small-XXLarge">
+            </td><br>
+            
+            <td>
+                <label for="jersey-color">Jersey Color:</label>
+                <input type="string" index="jersey-color" [(ngModel)]="jersey.color" placeholder="Black/White">
+            </td><br>
+            
+            <td>
+                <label for="jersey-quantity">Jersey Quantity:</label>
+                <input type="number" index="jersey-quantity" [(ngModel)]="jersey.quantity" placeholder="0">
+            </td>
+        
+        <br>
+        <button type="button" (click)="updateJersey()">Update</button>
+        </div>
+
+        <div class="update">
+            <app-create-discount [index]="jersey.index"></app-create-discount>
+        </div>
+    
+    </div>

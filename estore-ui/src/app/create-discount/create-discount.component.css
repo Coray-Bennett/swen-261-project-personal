@@ -1,0 +1,27 @@
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+
+#deleteDiscount {
+    background-color: var(--DARK-RED);
+}
+
+#deleteDiscount:hover {
+    background-color: red;
+}
+
+#confirmDelete {
+    background-color: orangered;
+}
+
+#confirmDelete:hover {
+    background-color: var(--LIGHT-YELLOW);
+    color: black;
+}
